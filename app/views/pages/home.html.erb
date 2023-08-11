@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<p id="message">Click the button to change me!</p>
+<button id="change-text">Change Text</button>
+
+<script>
+  document.querySelector("#change-text").addEventListener("click", function(){
+    document.querySelector("#message").textContent = "Text has been changed!";
+  });
+</script>
