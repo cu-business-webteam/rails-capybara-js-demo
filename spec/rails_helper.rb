@@ -25,15 +25,17 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'selenium-webdriver'
 
-Capybara.register_driver(:selenium_chrome) do |app|
+Capybara.register_driver(:selenium_remote) do |app|
   Capybara::Selenium::Driver.new(
     app,
-    browser: :chrome,
+    browser: :remote,
+    url: 'http://chromium:4444/wd/hub',
     options: Selenium::WebDriver::Options.chrome(args: %w[headless no-sandbox])
   )
 end
 
 Capybara.server_host = '0.0.0.0'
+Capybara.app_host = "http://#{`hostname`.strip.downcase}"
 
 RSpec.configure do |config|
   # Remove this line to enable support for ActiveRecord

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Pages", type: :system do
   before do
-    driven_by :selenium_chrome
+    driven_by :selenium_remote
   end
 
   it "changes text on button click" do
