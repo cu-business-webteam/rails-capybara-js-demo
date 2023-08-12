@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+このリポジトリは、system specを実行する際の異なる実行環境を検証するためのものです。
+SeleniumとChromiumを利用したテストが、以下の2つの異なる環境でどのように実行できるかを検証しています。
 
-Things you may want to cover:
+* local: appコンテナと同じコンテナ内でChromiumを動作させます(localでWebドライバーを実行)
+* remote: Chromiumをappコンテナとは別のコンテナで実行します(remoteでWebドライバーを実行)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## バージョン情報
+* Ruby: 3.2.2
+* Rails: 6.1.4
+* Chromium: 114.0.5735.106
+* Selenium WebDriver: 4.11.0
+* Docker: 20.10.16
+* docker-compose: v2.6.0
