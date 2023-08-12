@@ -7,7 +7,8 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - chromium
+      chromium:
+        condition: service_healthy
     networks:
       - app_net
   chromium:
@@ -19,5 +20,10 @@ services:
       driver: none
     networks:
       - app_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4444/wd/hub/status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 networks:
   app_net:
