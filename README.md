@@ -13,3 +13,19 @@ remote: Run Chromium in a separate container from the app container (run the web
 * Selenium WebDriver: 4.11.0
 * Docker: 20.10.16
 * docker-compose: v2.6.0
+
+## Notes
+Demo application: http://localhost:3000/pages/home.
+
+Selenium UI: http://localhost:4444/ui/
+
+Selenium status: http://localhost:4444/wd/hub/status
+
+### Run the Test
+
+```bash
+/app# bundle exec rspec
+```
+
+
+

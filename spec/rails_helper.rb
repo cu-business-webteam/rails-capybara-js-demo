@@ -30,7 +30,8 @@ Capybara.register_driver(:selenium_remote) do |app|
     app,
     browser: :remote,
     url: 'http://chromium:4444/wd/hub',
-    options: Selenium::WebDriver::Options.chrome(args: %w[headless no-sandbox])
+    # options: Selenium::WebDriver::Options.chrome(args: %w[headless no-sandbox])
+    options: Selenium::WebDriver::Options.chrome(args: %w[no-sandbox])
   )
 end
 
