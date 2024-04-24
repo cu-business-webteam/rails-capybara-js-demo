@@ -1,13 +1,12 @@
 # README
 
-## 概要
-このリポジトリは、system specを実行する際の異なる実行環境を検証するためのものです。
-SeleniumとChromiumを利用したテストが、以下の2つの異なる環境でどのように実行できるかを検証しています。
+## Overview
+This repository is for validating different execution environments when running system specs. We are verifying how tests using Selenium and Chromium can be executed in the following two different environments.
 
-* local: appコンテナと同じコンテナ内でChromiumを動作させます(localでWebドライバーを実行)
-* remote: Chromiumをappコンテナとは別のコンテナで実行します(remoteでWebドライバーを実行)
+local: Run Chromium in the same container as the app container (run the web driver locally)
+remote: Run Chromium in a separate container from the app container (run the web driver remotely)
 
-## バージョン情報
+## Version Information
 * Ruby: 3.2.2
 * Rails: 6.1.4
 * Chromium: 114.0.5735.106
