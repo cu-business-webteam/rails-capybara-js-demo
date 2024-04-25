@@ -1,0 +1,13 @@
+{
+    "dockerComposeFile": "../compose.yaml",
+    "service": "app",
+    "runServices": ["chromium"],
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
+}
